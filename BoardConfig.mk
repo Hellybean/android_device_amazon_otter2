@@ -27,6 +27,7 @@ TARGET_BOOTLOADER_BOARD_NAME := otter2
 TARGET_OTA_ASSERT_DEVICE := blaze_tablet,otter2
 TARGET_KERNEL_SOURCE := kernel/amazon/otter-common
 TARGET_KERNEL_CONFIG := otter2_android_defconfig
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := cortex-a9
 
 # Filesystem
 TARGET_RECOVERY_FSTAB = $(DEVICE_FOLDER)/fstab.otter2
