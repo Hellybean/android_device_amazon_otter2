@@ -38,8 +38,8 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 929038336
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_FOLDER)/boot.mk
 
 # hack the ota
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./$(DEVICE_FOLDER)/releasetools/bowser_ota_from_target_files
-TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./$(DEVICE_FOLDER)/releasetools/bowser_img_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./$(COMMON_FOLDER)/releasetools/bowser_ota_from_target_files
+TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./$(COMMON_FOLDER)/releasetools/bowser_img_from_target_files
 
 # Recovery
 TARGET_RECOVERY_FSTAB = $(DEVICE_FOLDER)/fstab.otter2
@@ -50,4 +50,5 @@ TARGET_RECOVERY_PRE_COMMAND := "/system/bin/pre-recovery.sh \#"
 # TWRP Config
 TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_NO_REBOOT_RECOVERY := true
 RECOVERY_SDCARD_ON_DATA := true
